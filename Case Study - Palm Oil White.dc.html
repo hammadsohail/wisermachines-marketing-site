@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet data-dc-atomics>
+<style>
+  body { margin: 0; background: #FFFFFF; }
+  a { color: #1A1A1A; text-decoration: none; }
+  a:hover { color: #000000; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+
+<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1A1A1A; background: #FFFFFF; width: 100%; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <div data-screen-label="Nav" style="position: sticky; top: 0; z-index: 100; background: #FFFFFF;">
+    <div style="display: flex; align-items: center; justify-content: space-between; height: 76px; padding: 0 48px;">
+      <a href="./Wiser Landing - White.dc.html" style="display: flex; align-items: center; height: 44px; padding: 0 14px; background: transparent;">
+        <img src="./assets/logo-wordmark.png" alt="Wiser Machines" style="height: 40px; width: auto; display: block; filter: brightness(0) saturate(100%) invert(15%);" />
+      </a>
+      <div style="display: flex; align-items: center; gap: 40px;">
+        <a href="./Wiser Landing - White.dc.html#case-studies" style="font-size: 13px; letter-spacing: 0.5px; color: rgba(26,26,26,0.7);">← All case studies</a>
+        <a href="#" onClick="{{ openCalendly }}" style="font-size: 13px; font-weight: 700; letter-spacing: 0.5px; color: #FFFFFF; background: #1A1A1A; padding: 10px 20px;">Book a demo</a>
+      </div>
+    </div>
+    <div style="height: 1px; background: rgba(26,26,26,0.3);"></div>
+  </div>
+
+  <!-- HERO -->
+  <div data-screen-label="Hero" style="padding: 64px 48px 0; background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.92) 60%, #FFFFFF), url('./assets/hero-bg-palmoil.jpg') center/cover no-repeat;">
+    <div style="font-size: 11px; letter-spacing: 2px; color: #888888; font-family: 'Courier New', monospace; margin-bottom: 28px;">CASE STUDY / PALM OIL MANUFACTURING — ENERGY AUDIT</div>
+    <div style="height: 1px; background: rgba(26,26,26,0.3);"></div>
+    <div style="padding: 32px 0 64px; max-width: 880px;">
+      <div style="font-size: 52px; font-weight: 700; line-height: 1.1; letter-spacing: -1px; color: #1A1A1A;">33.7% of the power drawn from the grid was doing no useful work.</div>
+      <p style="font-size: 17px; line-height: 1.6; color: rgba(26,26,26,0.65); margin-top: 24px; max-width: 640px;">42 days of continuous monitoring on a single heat exchanger pump circuit at a palm oil refinery uncovered a critically low power factor, two unexplained multi-day shutdowns, and a persistent phase imbalance — all invisible without minute-by-minute sensor data.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(26,26,26,0.25); border-bottom: 1px solid rgba(26,26,26,0.25);">
+      <div style="padding: 28px 24px; border-right: 1px solid rgba(26,26,26,0.2);">
+        <div style="font-size: 40px; font-weight: 700; color: #1A1A1A;">0.663</div>
+        <div style="font-size: 13px; color: rgba(26,26,26,0.55); margin-top: 8px;">Avg power factor — TNB minimum is 0.85</div>
+      </div>
+      <div style="padding: 28px 24px; border-right: 1px solid rgba(26,26,26,0.2);">
+        <div style="font-size: 40px; font-weight: 700; color: #1A1A1A;">6,418 kWh</div>
+        <div style="font-size: 13px; color: rgba(26,26,26,0.55); margin-top: 8px;">Total energy consumed, 42-day period</div>
+      </div>
+      <div style="padding: 28px 24px; border-right: 1px solid rgba(26,26,26,0.2);">
+        <div style="font-size: 40px; font-weight: 700; color: #1A1A1A;">59.6%</div>
+        <div style="font-size: 13px; color: rgba(26,26,26,0.55); margin-top: 8px;">Equipment utilisation — 703 of 1,008 hours</div>
+      </div>
+      <div style="padding: 28px 24px;">
+        <div style="font-size: 40px; font-weight: 700; color: #1A1A1A;">MYR 32,347</div>
+        <div style="font-size: 13px; color: rgba(26,26,26,0.55); margin-top: 8px;">Estimated annual cost, this circuit alone</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.0 THE ASSET -->
+  <div data-screen-label="The Asset" style="background: #FFFFFF; padding: 120px 48px;">
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 64px;">
+      <div style="font-size: 12px; letter-spacing: 1.5px; color: #1A1A1A; font-family: 'Courier New', monospace; white-space: nowrap;">/ THE ASSET</div>
+      <div style="flex: 1; height: 1px; background: rgba(26,26,26,0.25);"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;">
+      <div>
+        <div style="font-size: 34px; font-weight: 600; line-height: 1.2; margin-bottom: 20px; color: #1A1A1A;">A continuous-process pump circuit at a palm oil refinery.</div>
+        <p style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65);">Wiser's sensor monitored one electrical circuit at the facility — an exceptionally flat 9.13 kW load profile characteristic of a centrifugal pump, air compressor, or refinery stage running at steady state. 70,799 one-minute readings were captured with zero data gaps.</p>
+      </div>
+      <div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Monitoring period</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">17 Feb – 30 Mar 2026 (42 days)</span></div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Sampling interval</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">60 seconds</span></div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Total readings</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">70,799 — 100% data completeness</span></div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Channels logged</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">Current, power, PF, voltage × 3 phases</span></div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Avg active power (running)</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">9.13 kW</span></div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Peak demand recorded</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">10.01 kW</span></div>
+        <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.0 THE PROBLEM -->
+  <div data-screen-label="The Problem" style="background: #FFFFFF; padding: 0 48px 120px;">
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 64px;">
+      <div style="font-size: 12px; letter-spacing: 1.5px; color: #888888; font-family: 'Courier New', monospace; white-space: nowrap;">/ THE PROBLEM</div>
+      <div style="flex: 1; height: 1px; background: rgba(26,26,26,0.25);"></div>
+    </div>
+    <div style="font-size: 38px; font-weight: 600; line-height: 1.2; color: #1A1A1A; max-width: 700px; margin-bottom: 20px;">Four findings, invisible without minute-by-minute data.</div>
+    <p style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65); max-width: 680px; margin-bottom: 56px;">A monthly utility bill shows none of this. Only continuous, high-resolution monitoring surfaces a structural inefficiency running 100% of operating hours, two unexplained shutdown events, and a persistent phase imbalance.</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(26,26,26,0.2);">
+      <div style="background: #FFFFFF; padding: 20px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Power factor critical</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">0.663 avg — 100% of operating hours below the 0.85 TNB minimum</div></div>
+      <div style="background: #FFFFFF; padding: 20px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Two unexplained shutdowns</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">~165 combined hours of zero production, root cause unconfirmed</div></div>
+      <div style="background: #FFFFFF; padding: 20px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Phase 3 overload</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">7.7% more current than Phase 1, consistent across all 42 days</div></div>
+      <div style="background: #FFFFFF; padding: 20px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">No visibility between audits</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">Structural waste compounds daily with nothing to flag it in real time</div></div>
+    </div>
+  </div>
+
+  <!-- 3.0 THE SOLUTION -->
+  <div data-screen-label="The Solution" style="background: #FFFFFF; padding: 0 48px 120px;">
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 64px;">
+      <div style="font-size: 12px; letter-spacing: 1.5px; color: #1A1A1A; font-family: 'Courier New', monospace; white-space: nowrap;">/ THE SOLUTION</div>
+      <div style="flex: 1; height: 1px; background: rgba(26,26,26,0.25);"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;">
+      <div>
+        <div style="font-size: 34px; font-weight: 600; line-height: 1.2; margin-bottom: 20px; color: #1A1A1A;">For every 13.78 kVA drawn, only 9.13 kW did useful work.</div>
+        <p style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65);">Wiser's non-invasive sensor tapped current, power, power factor, and voltage on all three phases without touching the circuit. The remaining 10.33 kVAR circulates as reactive current — generating heat and occupying conductor capacity without contributing to output.</p>
+        <div style="margin-top: 32px;">
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Active power (useful work)</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">9.13 kW</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Reactive power (wasted)</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">10.33 kVAR</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Apparent power (grid draw)</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">13.78 kVA</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Reactive power ratio</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">33.7% of apparent power</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 34px; font-weight: 600; line-height: 1.2; margin-bottom: 20px; color: #1A1A1A;">Phase 3 runs consistently hotter — before it costs you a motor.</div>
+        <p style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65); margin-bottom: 32px;">Phase 3 draws 19.17A on average — 7.7% higher than Phase 1's 17.78A — persistent across all 42 days. Sustained imbalance elevates motor operating temperature and shortens insulation lifetime. Voltage quality, by contrast, was excellent throughout — zero readings below the 220V threshold.</p>
+        <div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Phase current imbalance</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">4.3% (NEMA caution zone)</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Phase power imbalance</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">11.4%</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Voltage range, all 3 phases</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">238V – 253V (compliant)</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 0;"><span style="font-size: 14px; color: rgba(26,26,26,0.55);">Shutdown events detected</span><span style="font-size: 15px; font-weight: 600; color: #1A1A1A;">2 — Mar 2–6 and Mar 26–30+</span></div>
+          <div style="height: 1px; background: rgba(26,26,26,0.25);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4.0 CONCLUSION -->
+  <div data-screen-label="Conclusion" style="background: #FFFFFF; padding: 0 48px 140px;">
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 64px;">
+      <div style="font-size: 12px; letter-spacing: 1.5px; color: #888888; font-family: 'Courier New', monospace; white-space: nowrap;">/ THE CONCLUSION</div>
+      <div style="flex: 1; height: 1px; background: rgba(26,26,26,0.25);"></div>
+    </div>
+    <div style="font-size: 38px; font-weight: 600; line-height: 1.2; color: #1A1A1A; max-width: 700px; margin-bottom: 20px;">Power factor correction pays for itself in 6–24 months.</div>
+    <p style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65); max-width: 680px; margin-bottom: 56px;">Correcting power factor to ≥0.95 cuts current draw ~30%, eliminates reactive-power surcharge exposure entirely, and saves an estimated MYR 4,700–9,700/year on this circuit alone — before accounting for the rest of the facility.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: rgba(26,26,26,0.2);">
+      <div style="background: #FFFFFF; padding: 24px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Install APFC</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">Target PF ≥ 0.95 → MYR 4,700–9,700/yr saved</div></div>
+      <div style="background: #FFFFFF; padding: 24px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Classify both shutdowns</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">Root-cause and quantify lost production</div></div>
+      <div style="background: #FFFFFF; padding: 24px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Rebalance phase loading</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">Reduce imbalance below 2%, cut motor thermal stress</div></div>
+      <div style="background: #FFFFFF; padding: 24px;"><div style="font-size: 13px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px;">Expand facility-wide</div><div style="font-size: 13px; color: rgba(26,26,26,0.55); line-height: 1.5;">Full energy baseline and real-time anomaly alerting</div></div>
+    </div>
+  </div>
+
+  <!-- FOOTER / CTA -->
+  <div data-screen-label="Footer" style="background: #FFFFFF; color: #1A1A1A; padding: 80px 48px 48px; border-top: 1px solid rgba(26,26,26,0.25);">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 24px;">
+      <div style="font-size: 28px; font-weight: 600; line-height: 1.3; max-width: 560px; color: #1A1A1A;">Find the waste hiding in your own utility bill.</div>
+      <a href="#" onClick="{{ openCalendly }}" style="font-size: 14px; font-weight: 700; color: #FFFFFF; background: #1A1A1A; padding: 14px 28px; white-space: nowrap;">Book a demo</a>
+    </div>
+    <div style="font-size: 13px; color: #888888;">© 2026 Wiser Machines Inc.</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    if (!document.querySelector('script[data-calendly-widget]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      document.head.appendChild(link);
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.setAttribute('data-calendly-widget', '1');
+      document.head.appendChild(script);
+    }
+  }
+
+  openCalendly = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/zaid-wisermachines/30min?background_color=ffffff&text_color=1a1a1a&primary_color=1a1a1a' });
+    } else {
+      window.open('https://calendly.com/zaid-wisermachines/30min', '_blank');
+    }
+  };
+
+  renderVals() {
+    return {
+      openCalendly: this.openCalendly,
+    };
+  }
+}
+
+</script>
+</body>
+</html>
