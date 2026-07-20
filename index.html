@@ -241,7 +241,10 @@
       <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
         <div style="position: relative; margin: 0 auto; max-width: 100%;">
           <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%) rotate(8deg); width: 74%; height: 52px; background: rgba(0,0,0,0.28); filter: blur(32px); border-radius: 50%;"></div>
-          <video ref="{{ setAlertsVideoRef }}" src="./assets/mobile-alerts-mockup.webm" muted playsinline style="position: relative; width: 420px; max-width: 100%; height: auto; display: block; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%);"></video>
+          <video ref="{{ setAlertsVideoRef }}" muted playsinline style="position: relative; width: 420px; max-width: 100%; height: auto; display: block; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%);">
+            <source src="./assets/mobile-alerts-mockup.webm" type="video/webm">
+            <source src="./assets/mobile-alerts-mockup.mp4" type="video/mp4">
+          </video>
         </div>
         <div style="position: relative; z-index: 2; font-size: 11px; letter-spacing: 0.5px; color: #888888; font-family: 'Courier New', monospace; margin-top: 10px; text-align: center;">FIG. 05 / MOBILE ALERTS</div>
       </div>
