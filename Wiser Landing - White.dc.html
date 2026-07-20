@@ -25,6 +25,12 @@
   .wm-case-grid { grid-template-columns: 1fr !important; }
   .wm-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 28px !important; }
   .wm-footer-top { flex-direction: column !important; align-items: flex-start !important; }
+  .wm-alerts-sec { background: #000000 !important; }
+  .wm-alerts-heading { color: #FFFFFF !important; }
+  .wm-alerts-body { color: rgba(242,242,242,0.65) !important; }
+  .wm-alerts-line { background: rgba(242,242,242,0.25) !important; }
+  .wm-alerts-shadow { display: none !important; }
+  .wm-alerts-video { -webkit-mask-image: none !important; mask-image: none !important; }
 }
 @media (min-width: 821px) {
   .wm-mobile-menu { display: none !important; }
@@ -228,23 +234,20 @@
 
 
   <!-- 05 MOBILE ALERTS -->
-  <div ref="{{ registerAlerts }}" data-screen-label="Mobile alerts" class="wm-sec-pad" style="background: #FFFFFF; padding: 120px 48px;">
+  <div ref="{{ registerAlerts }}" data-screen-label="Mobile alerts" class="wm-sec-pad wm-alerts-sec" style="background: #FFFFFF; padding: 120px 48px;">
     <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 64px;">
-      <div style="font-size: 12px; letter-spacing: 1.5px; color: #1A1A1A; font-family: 'Courier New', monospace; white-space: nowrap;">/ MOBILE ALERTS</div>
-      <div style="height: 1px; flex: 1; background: rgba(26,26,26,0.25); transform-origin: left; transition: transform 2.4s cubic-bezier(0.16,1,0.3,1); transform: scaleX({{ lineScale.alerts }});"></div>
+      <div style="font-size: 12px; letter-spacing: 1.5px; color: #888888; font-family: 'Courier New', monospace; white-space: nowrap;">/ MOBILE ALERTS</div>
+      <div class="wm-alerts-line" style="height: 1px; flex: 1; background: rgba(26,26,26,0.25); transform-origin: left; transition: transform 2.4s cubic-bezier(0.16,1,0.3,1); transform: scaleX({{ lineScale.alerts }});"></div>
     </div>
     <div class="wm-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;">
       <div style="position: relative; z-index: 2;">
-        <div style="font-size: 44px; font-weight: 700; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 24px; color: #1A1A1A;">Know the moment something changes on the shop floor.</div>
-        <p style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65); max-width: 480px;">Threshold breaches, overheating, abnormal activity — pushed straight to your phone the instant they happen, with shift reports queued up for whenever you're back at your desk.</p>
+        <div class="wm-alerts-heading" style="font-size: 44px; font-weight: 700; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 24px; color: #1A1A1A;">Know the moment something changes on the shop floor.</div>
+        <p class="wm-alerts-body" style="font-size: 16px; line-height: 1.6; color: rgba(26,26,26,0.65); max-width: 480px;">Threshold breaches, overheating, abnormal activity — pushed straight to your phone the instant they happen, with shift reports queued up for whenever you're back at your desk.</p>
       </div>
       <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
         <div style="position: relative; margin: 0 auto; max-width: 100%;">
-          <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%) rotate(8deg); width: 74%; height: 52px; background: rgba(0,0,0,0.28); filter: blur(32px); border-radius: 50%;"></div>
-          <video ref="{{ setAlertsVideoRef }}" muted playsinline style="position: relative; width: 420px; max-width: 100%; height: auto; display: block; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%);">
-            <source src="./assets/mobile-alerts-mockup.webm" type="video/webm">
-            <source src="./assets/mobile-alerts-mockup.mp4" type="video/mp4">
-          </video>
+          <div class="wm-alerts-shadow" style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%) rotate(8deg); width: 74%; height: 52px; background: rgba(0,0,0,0.28); filter: blur(32px); border-radius: 50%;"></div>
+          <video ref="{{ setAlertsVideoRef }}" src="./assets/mobile-alerts-mockup.webm" muted playsinline class="wm-alerts-video" style="position: relative; width: 420px; max-width: 100%; height: auto; display: block; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 2.5%, black 97.5%, transparent 100%);"></video>
         </div>
         <div style="position: relative; z-index: 2; font-size: 11px; letter-spacing: 0.5px; color: #888888; font-family: 'Courier New', monospace; margin-top: 10px; text-align: center;">FIG. 05 / MOBILE ALERTS</div>
       </div>
@@ -279,7 +282,7 @@
     </div>
     <div style="font-size: 38px; font-weight: 600; line-height: 1.2; color: #1A1A1A; max-width: 640px; margin-bottom: 64px;">Proven on real production floors.</div>
     <div class="wm-case-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-      <a href="/case-study-semiconductor" style="display: block;">
+      <a href="./Case Study - Semiconductor White.dc.html" style="display: block;">
         <div style="position: relative; aspect-ratio: 1/1; background: #F0F0F0 url('./assets/case-study-semiconductor-wafer.jpg') center/cover no-repeat; border: 1px solid rgba(26,26,26,0.2);">
           <div style="position: absolute; inset: 0; background: rgba(11,13,12,0.5);"></div>
         </div>
@@ -293,7 +296,7 @@
         <div style="font-size: 16px; font-weight: 600; color: #1A1A1A; margin-top: 20px;">CNC machining line</div>
         <div style="font-size: 14px; line-height: 1.5; color: rgba(26,26,26,0.55); margin-top: 6px;">Two breakdowns caught before failure.</div>
       </div>
-      <a href="/case-study-palm-oil" style="display: block;">
+      <a href="./Case Study - Palm Oil White.dc.html" style="display: block;">
         <div style="position: relative; aspect-ratio: 1/1; background: #F0F0F0 url('./assets/hero-bg-palmoil.jpg') center/cover no-repeat; border: 1px solid rgba(26,26,26,0.2);">
           <div style="position: absolute; inset: 0; background: rgba(11,13,12,0.35);"></div>
         </div>
@@ -382,6 +385,7 @@ class Component extends DCLogic {
     // hero video is above the fold — load & play immediately
     this.ensureVideoLoaded('heroLoop', true);
     this.setupHeroSequence();
+    this.setupMobileAutoplay();
     this._move = (e) => this.handleMove(e);
     this._up = () => this.setState({ dragging: false });
     window.addEventListener('mousemove', this._move);
@@ -532,6 +536,39 @@ class Component extends DCLogic {
   registerResults = (el) => this.registerGeneric('results', el);
   registerMission = (el) => this.registerGeneric('mission', el);
   registerAlerts = (el) => this.registerGeneric('alerts', el);
+
+  setupMobileAutoplay() {
+    if (this._mobileAutoplaySetup) return;
+    if (window.innerWidth > 820) return;
+    this._mobileAutoplaySetup = true;
+    // On mobile there is no hover — autoplay + loop the hover-driven clips when
+    // they scroll into view, and pause off-screen to limit concurrent decoders.
+    const keys = ['graph', 'detected', 'schedules'];
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const key = entry.target._mobileKey;
+        if (!key) return;
+        if (entry.isIntersecting) {
+          this.ensureVideoLoaded(key, false);
+          const v = this.videoRefs[key];
+          if (v) { v.loop = true; v.muted = true; v.play().catch(() => {}); }
+        } else {
+          this.pauseVideo(key);
+        }
+      });
+    }, { threshold: 0.25 });
+    const attach = () => {
+      let ready = true;
+      keys.forEach((k) => {
+        const v = this.videoRefs[k];
+        if (v && !v._mobileObserved) { v._mobileObserved = true; v._mobileKey = k; obs.observe(v); }
+        else if (!v) ready = false;
+      });
+      if (!ready) setTimeout(attach, 100);
+    };
+    attach();
+    this.observers.mobileAutoplay = obs;
+  }
   registerCaseStudies = (el) => this.registerGeneric('caseStudies', el);
   registerFooter = (el) => this.registerGeneric('footer', el);
 
@@ -563,17 +600,25 @@ class Component extends DCLogic {
       const el = this.videoRefs.heroLoop;
       if (!el) { setTimeout(wire, 50); return; }
       el.addEventListener('ended', () => {
+        const playWhenReady = () => {
+          el.muted = true;
+          el.load();
+          const go = () => el.play().catch(() => {});
+          go();
+          // iOS rejects the first play() before the freshly-swapped source is ready;
+          // retry once it has data.
+          el.addEventListener('canplay', go, { once: true });
+          el.addEventListener('loadeddata', go, { once: true });
+        };
         if (!this._heroSequenceAdvanced) {
           this._heroSequenceAdvanced = true;
           el.src = './assets/anomaly-detected-fig00.mp4';
-          el.load();
-          el.play().catch(() => {});
+          playWhenReady();
         } else {
           // second clip finished — loop back to the first, restarting the sequence
           this._heroSequenceAdvanced = false;
           el.src = this.paths.heroLoop;
-          el.load();
-          el.play().catch(() => {});
+          playWhenReady();
         }
       });
     };
@@ -636,15 +681,30 @@ class Component extends DCLogic {
   setAlertsVideoRef = (el) => {
     if (el && el !== this._alertsVideoEl) {
       this._alertsVideoEl = el;
-      el.loop = false;
+      const isMobile = window.innerWidth <= 820;
+      el.loop = isMobile;
       el.muted = true;
       el.preload = 'auto';
-      // Seeking to 0.3 only works once metadata is loaded — doing it too early
-      // (before load) is what made it intermittently fail. Gate the seek.
+      // Desktop uses the transparent WebM (floats on white); mobile uses the
+      // black-background MP4 in the black section (WebM won't play on iOS).
+      if (isMobile) { el.src = './assets/mobile-alerts-mockup.mp4'; el.load(); }
       const seekStart = () => { try { if (el.readyState >= 1) el.currentTime = 0.3; } catch (e) {} };
       if (el.readyState >= 1) seekStart();
       else el.addEventListener('loadedmetadata', seekStart, { once: true });
-      // Play once when the mobile-alerts section scrolls into view; no loop-back.
+      // On mobile: autoplay + loop when the section scrolls into view.
+      if (isMobile) {
+        if (!this._alertsObs) {
+          this._alertsObs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) el.play().catch(() => {});
+              else el.pause();
+            });
+          }, { threshold: 0.25 });
+          this._alertsObs.observe(el);
+        }
+        return;
+      }
+      // Desktop: play once when the mobile-alerts section scrolls into view; no loop-back.
       if (!this._alertsObs) {
         this._alertsObs = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
